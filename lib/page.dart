@@ -237,7 +237,40 @@ class _PagedState extends State<Paged> {
                   ),
                 ),
               ],
-            )
+            ),
+            Flexible(
+              child: Container(),
+              flex: 2,
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Container(
+              width: double.infinity,
+              color: Colors.black45,
+              child: Column(
+                children: [
+                  Text(
+                    "Compaore Raoul",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 3,
+                  ),
+                  Text(
+                    "Raoul2compaore@gmail.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
