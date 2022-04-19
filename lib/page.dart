@@ -12,16 +12,8 @@ class _PagedState extends State<Paged> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.more_vert,
-              color: Colors.black,
-            ),
-          ),
-        ],
       ),
       body: Container(
         child: Column(
@@ -30,19 +22,39 @@ class _PagedState extends State<Paged> {
               height: 20,
             ),
             Container(
-              height: 120,
-              width: 250,
+              //height: 120,
+              //width: 250,
+              margin: const EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(vertical: 15),
               decoration: BoxDecoration(
-                color: Colors.green,
+                border: Border.all(
+                  color: Color.fromARGB(233, 25, 239, 178),
+                ),
+                color: Colors.white,
                 borderRadius: BorderRadius.all(
                   Radius.circular(15),
                 ),
               ),
               alignment: Alignment.center,
-              child: Text(
-                "2 000 900 FCFA",
-                style: TextStyle(color: Colors.black, fontSize: 30),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.account_balance_wallet_outlined,
+                    color: Colors.green,
+                    size: 40,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "2 000 900 FCFA",
+                    style: TextStyle(color: Colors.black, fontSize: 30),
+                  ),
+                ],
               ),
+            ),
+            const SizedBox(
+              height: 8,
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -53,45 +65,105 @@ class _PagedState extends State<Paged> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    "Diallo Moctar 10 000 FCFA",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  Container(
+                    //height: 30,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.blueAccent,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Kabre Maghid Inoussa  43 000 FCFA",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    "Zanpaligré Assana 180 000 FCFA",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 9, 56, 208),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  Container(
+                    //height: 30,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.blueAccent,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Nikiema Mounira 1 010 FCFA",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    "Zongo Inoussa 80 000 FCFA",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 9, 56, 208),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  Container(
+                    //height: 30,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.blueAccent,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Compaore Elodie 23 660 FCFA",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    "Kabre Mohammed 18 000 FCFA",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 9, 56, 208),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  Container(
+                    // height: 30,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.blueAccent,
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      "Zougmooré Doriana 97 000 FCFA",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                        //fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ],
@@ -99,11 +171,12 @@ class _PagedState extends State<Paged> {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   //padding: const EdgeInsets.symmetric(),
-                  height: 80,
-                  width: 120,
+                  height: 70,
+                  width: 110,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.all(
@@ -119,10 +192,13 @@ class _PagedState extends State<Paged> {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  width: 2,
+                ),
                 Container(
                   //padding: const EdgeInsets.symmetric(),
-                  height: 80,
-                  width: 120,
+                  height: 70,
+                  width: 110,
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     borderRadius: BorderRadius.all(
@@ -138,10 +214,13 @@ class _PagedState extends State<Paged> {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  width: 2,
+                ),
                 Container(
                   //padding: const EdgeInsets.symmetric(),
-                  height: 80,
-                  width: 120,
+                  height: 70,
+                  width: 110,
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.all(

@@ -81,25 +81,25 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(
                 height: 45,
               ),
-              Container(
-                height: 50,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(233, 25, 239, 178),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Paged(),
+                    ),
+                  );
+                },
+                child: Container(
+                  height: 50,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(233, 25, 239, 178),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
-                ),
-                alignment: Alignment.center,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Paged(),
-                      ),
-                    );
-                  },
+                  alignment: Alignment.center,
                   child: Text(
                     "Valider",
                     style: TextStyle(
