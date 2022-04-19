@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unib/page.dart';
 import 'package:unib/textfield.dart';
 
 void main() {
@@ -91,7 +92,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 alignment: Alignment.center,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Paged(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Valider",
                     style: TextStyle(
