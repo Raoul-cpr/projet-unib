@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Paged extends StatefulWidget {
   const Paged({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _PagedState extends State<Paged> {
         title: Image.asset(
           'asset/image0.jpg',
           //fit: BoxFit.cover,
-          height: 45,
+          height: 56,
         ),
         elevation: 0,
         backgroundColor: Colors.white,
@@ -46,21 +47,27 @@ class _PagedState extends State<Paged> {
                 ),
               ),
               alignment: Alignment.center,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.account_balance_wallet_outlined,
-                    color: Colors.green,
-                    size: 40,
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "2 000 900 FCFA",
-                    style: TextStyle(color: Colors.black, fontSize: 30),
-                  ),
-                ],
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.wallet,
+                      color: Colors.green,
+                      size: 40,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "2 000 900 FCFA",
+                      style: GoogleFonts.lato(
+                          color: Colors.black,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(
@@ -74,7 +81,7 @@ class _PagedState extends State<Paged> {
                   ),
                   child: Text(
                     "Dons recents",
-                    style: TextStyle(
+                    style: GoogleFonts.roboto(
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -98,6 +105,10 @@ class _PagedState extends State<Paged> {
               height: 8,
             ),
             Container(
+              margin: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
               padding: const EdgeInsets.symmetric(horizontal: 25),
               height: 300,
               width: double.infinity,
@@ -124,7 +135,7 @@ class _PagedState extends State<Paged> {
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         "Kabre Maghid Inoussa  43 000 FCFA",
-                        style: TextStyle(
+                        style: GoogleFonts.roboto(
                           color: Colors.blueAccent,
                           //fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -173,7 +184,7 @@ class _PagedState extends State<Paged> {
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         "Nikiema Mounira 1 010 FCFA",
-                        style: TextStyle(
+                        style: GoogleFonts.roboto(
                           color: Colors.blueAccent,
                           //fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -222,7 +233,7 @@ class _PagedState extends State<Paged> {
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         "Compaore Elodie 23 660 FCFA",
-                        style: TextStyle(
+                        style: GoogleFonts.roboto(
                           color: Colors.blueAccent,
                           //fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -271,7 +282,7 @@ class _PagedState extends State<Paged> {
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         "Zougmooré Doriana 97 000 FCFA",
-                        style: TextStyle(
+                        style: GoogleFonts.roboto(
                           color: Colors.blueAccent,
                           //fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -308,109 +319,121 @@ class _PagedState extends State<Paged> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 7,
+            ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
-                  height: 70,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      border: Border.all(
-                        color: Color.fromARGB(233, 25, 239, 178),
-                      )),
-                  //alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.handHoldingHeart,
-                        color: Colors.red,
-                        size: 25,
-                      ),
-                      Text(
-                        "Don",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    height: 70,
+                    width: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 2,
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
-                  height: 70,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      border: Border.all(
-                        color: Color.fromARGB(233, 25, 239, 178),
-                      )),
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.list,
-                        color: Color.fromARGB(255, 11, 123, 214),
-                        size: 25,
-                      ),
-                      Text(
-                        "Liste des dons",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        border: Border.all(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                        )),
+                    //alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.handHoldingHeart,
+                          color: Colors.red,
+                          size: 25,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 2,
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
-                  height: 70,
-                  width: 110,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      border: Border.all(
-                        color: Color.fromARGB(233, 25, 239, 178),
-                      )),
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.info,
-                        color: Color.fromARGB(255, 237, 204, 41),
-                        size: 25,
-                      ),
-                      Text(
-                        "En savoir plus",
-                        style: TextStyle(
+                        Text(
+                          "Don",
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 2,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    height: 70,
+                    width: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        border: Border.all(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                        )),
+                    alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.list,
+                          color: Color.fromARGB(255, 11, 123, 214),
+                          size: 25,
+                        ),
+                        Text(
+                          "Liste des dons",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 2,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    height: 70,
+                    width: 110,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        border: Border.all(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                        )),
+                    alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.info,
+                          color: Color.fromARGB(255, 237, 204, 41),
+                          size: 25,
+                        ),
+                        Text(
+                          "En savoir plus",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -423,11 +446,11 @@ class _PagedState extends State<Paged> {
               height: 4,
             ),
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.symmetric(horizontal: 60),
               decoration: BoxDecoration(
                 color: Color.fromARGB(233, 25, 239, 178),
                 borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(30),
                 ),
               ),
               child: Column(
@@ -453,7 +476,10 @@ class _PagedState extends State<Paged> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height: 8,
+            ),
             /*Container(
               width: double.infinity,
               color: Color.fromARGB(233, 25, 239, 178),
