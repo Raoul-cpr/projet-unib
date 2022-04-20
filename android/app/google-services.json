@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "301305619011",
+    "project_id": "projet-unib",
+    "storage_bucket": "projet-unib.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301305619011:android:bf6874e48f5656261aeaf6",
+        "android_client_info": {
+          "package_name": "com.example.unib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301305619011-ki4ps5o1ecjn7ag29ho9po9138757t9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWbmJl99uxZeKtb5NqZzUONDshpcNS4p4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301305619011-ki4ps5o1ecjn7ag29ho9po9138757t9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
