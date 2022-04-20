@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const Paged(),

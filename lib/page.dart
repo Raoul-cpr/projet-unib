@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Paged extends StatefulWidget {
   const Paged({Key? key}) : super(key: key);
@@ -12,6 +15,12 @@ class _PagedState extends State<Paged> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        title: Image.asset(
+          'asset/image0.jpg',
+          //fit: BoxFit.cover,
+          height: 45,
+        ),
         elevation: 0,
         backgroundColor: Colors.white,
       ),
@@ -19,7 +28,7 @@ class _PagedState extends State<Paged> {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
             Container(
               //height: 120,
@@ -29,6 +38,7 @@ class _PagedState extends State<Paged> {
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Color.fromARGB(233, 25, 239, 178),
+                  width: 2,
                 ),
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
@@ -56,117 +66,246 @@ class _PagedState extends State<Paged> {
             const SizedBox(
               height: 8,
             ),
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                  ),
+                  child: Text(
+                    "Dons recents",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 3,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 11,
+                  ),
+                  height: 1,
+                  width: 200,
+                  color: Colors.black12,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 8,
+            ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               height: 300,
               width: double.infinity,
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    //height: 30,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 1,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
                       ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        "Kabre Maghid Inoussa  43 000 FCFA",
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "Kabre Maghid Inoussa  43 000 FCFA",
-                      style: TextStyle(
-                        color: Colors.blueAccent,
-                        //fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    //height: 30,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 1,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 247,
                       ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        "Nikiema Mounira 1 010 FCFA",
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "Nikiema Mounira 1 010 FCFA",
-                      style: TextStyle(
-                        color: Colors.blueAccent,
-                        //fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    //height: 30,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 1,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
                       ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        "Compaore Elodie 23 660 FCFA",
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "Compaore Elodie 23 660 FCFA",
-                      style: TextStyle(
-                        color: Colors.blueAccent,
-                        //fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    // height: 30,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: Colors.blueAccent,
-                        width: 1,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
                       ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      // height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        "Zougmooré Doriana 97 000 FCFA",
+                        style: TextStyle(
+                          color: Colors.blueAccent,
+                          //fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "Zougmooré Doriana 97 000 FCFA",
-                      style: TextStyle(
-                        color: Colors.blueAccent,
-                        //fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                  ],
+                ),
               ),
             ),
             Row(
@@ -174,66 +313,104 @@ class _PagedState extends State<Paged> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  //padding: const EdgeInsets.symmetric(),
+                  padding: const EdgeInsets.symmetric(vertical: 6),
                   height: 70,
                   width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Don",
-                    style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
-                    ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      border: Border.all(
+                        color: Color.fromARGB(233, 25, 239, 178),
+                      )),
+                  //alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.handHoldingHeart,
+                        color: Colors.red,
+                        size: 25,
+                      ),
+                      Text(
+                        "Don",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(
                   width: 2,
                 ),
                 Container(
-                  //padding: const EdgeInsets.symmetric(),
+                  padding: const EdgeInsets.symmetric(vertical: 6),
                   height: 70,
                   width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Liste des dons",
-                    style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
-                    ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      border: Border.all(
+                        color: Color.fromARGB(233, 25, 239, 178),
+                      )),
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.list,
+                        color: Color.fromARGB(255, 11, 123, 214),
+                        size: 25,
+                      ),
+                      Text(
+                        "Liste des dons",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(
                   width: 2,
                 ),
                 Container(
-                  //padding: const EdgeInsets.symmetric(),
+                  padding: const EdgeInsets.symmetric(vertical: 6),
                   height: 70,
                   width: 110,
                   decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "En savoir plus",
-                    style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
-                    ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                      border: Border.all(
+                        color: Color.fromARGB(233, 25, 239, 178),
+                      )),
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.info,
+                        color: Color.fromARGB(255, 237, 204, 41),
+                        size: 25,
+                      ),
+                      Text(
+                        "En savoir plus",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -243,11 +420,43 @@ class _PagedState extends State<Paged> {
               flex: 2,
             ),
             const SizedBox(
-              height: 5,
+              height: 4,
             ),
             Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(233, 25, 239, 178),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    "Compaoré Raoul",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  Text(
+                    "Raoul2compaoré@gmail.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            )
+            /*Container(
               width: double.infinity,
-              color: Colors.black45,
+              color: Color.fromARGB(233, 25, 239, 178),
               child: Column(
                 children: [
                   Text(
@@ -267,10 +476,10 @@ class _PagedState extends State<Paged> {
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                     ),
-                  )
+                  ),
                 ],
               ),
-            ),
+            ),*/
           ],
         ),
       ),
