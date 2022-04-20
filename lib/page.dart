@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:unib/donpage.dart';
+import 'package:unib/ensavoirpluspage.dart';
+import 'package:unib/listeDonPage.dart';
 
 class Paged extends StatefulWidget {
   const Paged({Key? key}) : super(key: key);
@@ -327,7 +330,14 @@ class _PagedState extends State<Paged> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Donpage(),
+                      ),
+                    );
+                  },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     height: 70,
@@ -365,7 +375,14 @@ class _PagedState extends State<Paged> {
                   width: 2,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListDonPage(),
+                      ),
+                    );
+                  },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     height: 70,
@@ -403,7 +420,14 @@ class _PagedState extends State<Paged> {
                   width: 2,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EnSavoirPage(),
+                      ),
+                    );
+                  },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     height: 70,
