@@ -30,14 +30,16 @@ class AuthMethods {
   }
 
   Future<String> connect(
-      {required String email, required String passWord}) async {
+      {required String email, required String password}) async {
     String res = "Some error occure";
     try {
-      if (email.isNotEmpty || passWord.isNotEmpty) {
-        UserCredential cred = await _auth.signInWithEmailAndPassword(
-            email: email, password: passWord);
+      if (email.isNotEmpty || password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        res = 'Succes';
+      } else {
+        res = "Entrer tout les champs SVP";
       }
-      res = 'Succes';
     } catch (e) {
       res = e.toString();
     }

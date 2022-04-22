@@ -22,6 +22,7 @@ class Textfield extends StatelessWidget {
         focusedBorder: inputBorder,
         disabledBorder: inputBorder,
         hintText: hintText,
+        filled: true,
         contentPadding: const EdgeInsets.all(16),
       ),
       obscureText: obscureText,

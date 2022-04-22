@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unib/main.dart';
 import 'package:unib/page.dart';
 import 'package:unib/textfield.dart';
 
 import 'authMethods.dart';
-import 'identifyPage.dart';
+import 'connectPage.dart';
 
-class ConnectPage extends StatefulWidget {
-  const ConnectPage({Key? key}) : super(key: key);
+class IdentifyPage extends StatefulWidget {
+  const IdentifyPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<ConnectPage> createState() => _ConnectPageState();
+  State<IdentifyPage> createState() => _IdentifyPageState();
 }
 
-class _ConnectPageState extends State<ConnectPage> {
+class _IdentifyPageState extends State<IdentifyPage> {
+  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passWordController = TextEditingController();
   bool _isLoading = false;
@@ -22,17 +24,19 @@ class _ConnectPageState extends State<ConnectPage> {
   @override
   void dispose() {
     super.dispose();
+    _nameController.dispose();
     _emailController.dispose();
     _passWordController.dispose();
   }
 
-  void connectUser() async {
+  void signInUser() async {
     setState(() {
       _isLoading = true;
     });
-    String res = await AuthMethods().connect(
+    String res = await AuthMethods().signIn(
       email: _emailController.text,
-      password: _passWordController.text,
+      uName: _nameController.text,
+      passWord: _passWordController.text,
     );
     setState(() {
       _isLoading = false;
@@ -72,7 +76,7 @@ class _ConnectPageState extends State<ConnectPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: Text(
-                      "Veuillez entrer ces informations pour vous connecter",
+                      "Bienvenue sur Unib, veillez entrer ces informations pour pouvoir faire un don, si vous preferez etre dans l'anonymat, marquez anonyme",
                       style: GoogleFonts.lato(
                         color: Colors.black,
                         fontSize: 20,
@@ -83,7 +87,17 @@ class _ConnectPageState extends State<ConnectPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 60,
+                  height: 30,
+                ),
+                Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Textfield(
+                      controller: _nameController,
+                      hintText: "Nom complet",
+                      obscureText: false,
+                    )),
+                const SizedBox(
+                  height: 30,
                 ),
                 Container(
                     margin: const EdgeInsets.symmetric(horizontal: 15),
@@ -106,10 +120,10 @@ class _ConnectPageState extends State<ConnectPage> {
                   height: 30,
                 ),
                 InkWell(
-                  onTap: connectUser,
+                  onTap: signInUser,
                   child: Container(
                     //height: 50,
-                    //width: 300,
+                    width: double.infinity,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     padding: const EdgeInsets.symmetric(
                         vertical: 12, horizontal: 30),
@@ -127,7 +141,7 @@ class _ConnectPageState extends State<ConnectPage> {
                             ),
                           )
                         : const Text(
-                            "Creer un compte",
+                            "Valider",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
@@ -137,50 +151,43 @@ class _ConnectPageState extends State<ConnectPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 60,
                 ),
-                Text(
-                  "Mot de passe oublié",
-                  style: GoogleFonts.raleway(
-                    color: Colors.blueAccent,
-                    fontSize: 15,
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Vous avez deja un compte?",
+                      style: GoogleFonts.lato(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 2,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ConnectPage()));
+                      },
+                      child: Text(
+                        "Se connecter",
+                        style: GoogleFonts.raleway(
+                          color: Colors.blueAccent,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Vous n'avez pas de compte?",
-            style: GoogleFonts.lato(
-              color: Colors.black,
-              fontSize: 15,
-            ),
-          ),
-          const SizedBox(
-            width: 3,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const IdentifyPage()));
-            },
-            child: Text(
-              "Creer un compte",
-              style: GoogleFonts.raleway(
-                color: Colors.blueAccent,
-                fontSize: 15,
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
