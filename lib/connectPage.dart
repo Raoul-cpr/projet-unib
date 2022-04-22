@@ -1,57 +1,21 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unib/authMethods.dart';
-import 'package:unib/connectPage.dart';
+import 'package:unib/main.dart';
 import 'package:unib/page.dart';
 import 'package:unib/textfield.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-        options: const FirebaseOptions(
-            apiKey: "AIzaSyBw-7EeEj6sTz-yWTmnJGNp0um1bwPdKWk",
-            projectId: "projet-unib",
-            storageBucket: "projet-unib.appspot.com",
-            messagingSenderId: "301305619011",
-            appId: "1:301305619011:web:057358961a63646c1aeaf6"));
-  } else {
-    await Firebase.initializeApp();
-  }
-  runApp(const MyApp());
+import 'authMethods.dart';
+
+class ConnectPage extends StatefulWidget {
+  const ConnectPage({Key? key}) : super(key: key);
+
+  @override
+  State<ConnectPage> createState() => _ConnectPageState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class _ConnectPageState extends State<ConnectPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    final TextEditingController _nameController = TextEditingController();
     final TextEditingController _emailController = TextEditingController();
     final TextEditingController _passWordController = TextEditingController();
     bool _isLoading = false;
@@ -59,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
     @override
     void dispose() {
       super.dispose();
-      _nameController.dispose();
+
       _emailController.dispose();
       _passWordController.dispose();
     }
@@ -68,9 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
       setState(() {
         _isLoading = true;
       });
-      String res = await AuthMethods().signIn(
+      String res = await AuthMethods().connect(
         email: _emailController.text,
-        uName: _nameController.text,
         passWord: _passWordController.text,
       );
       setState(() {
@@ -109,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: Text(
-                      "Bienvenue sur Unib, veillez entrer ces informations pour pouvoir faire un don, si vous preferez etre dans l'anonymat, marquez anonyme",
+                      "Veuillez entrer ces informations pour vous connecter",
                       style: GoogleFonts.lato(
                         color: Colors.black,
                         fontSize: 20,
@@ -120,17 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
-                ),
-                Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Textfield(
-                      controller: _nameController,
-                      hintText: "Nom complet",
-                      obscureText: false,
-                    )),
-                const SizedBox(
-                  height: 30,
+                  height: 60,
                 ),
                 Container(
                     margin: const EdgeInsets.symmetric(horizontal: 15),
@@ -174,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           )
                         : Text(
-                            "Valider",
+                            "Creer un compte",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
@@ -184,7 +137,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 4,
+                  height: 20,
+                ),
+                Text(
+                  "Mot de passe oublié",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.blueAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
@@ -196,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Vous avez deja un compte?",
+            "Vous n'avez pas de compte?",
             style: GoogleFonts.lato(
               color: Colors.black,
               fontSize: 15,
@@ -208,10 +169,10 @@ class _MyHomePageState extends State<MyHomePage> {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ConnectPage()));
+                  MaterialPageRoute(builder: (context) => const MyHomePage()));
             },
             child: Text(
-              "Se connecter",
+              "Creer un compte",
               style: GoogleFonts.raleway(
                 color: Colors.blueAccent,
                 fontSize: 15,

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -136,13 +134,26 @@ class _PagedState extends State<Paged> {
                         ),
                       ),
                       padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Kabre Maghid Inoussa  43 000 FCFA",
-                        style: GoogleFonts.roboto(
-                          color: Colors.blueAccent,
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Kabre Maghid Inoussa",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "43 000 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
@@ -185,13 +196,242 @@ class _PagedState extends State<Paged> {
                         ),
                       ),
                       padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Nikiema Mounira 1 010 FCFA",
-                        style: GoogleFonts.roboto(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nikiema Mounira",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "1 010 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
+                      ),
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
                           color: Colors.blueAccent,
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                          width: 1,
                         ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nikiema Mounira",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "1 010 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
+                      ),
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nikiema Mounira",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "1 010 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
+                      ),
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nikiema Mounira",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "1 010 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      height: 4,
+                      width: 2,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(
+                        right: 245,
+                      ),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.green,
+                        size: 15,
+                      ),
+                    ),
+                    Container(
+                      //height: 30,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Nikiema Mounira",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "1 010 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
@@ -234,13 +474,26 @@ class _PagedState extends State<Paged> {
                         ),
                       ),
                       padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Compaore Elodie 23 660 FCFA",
-                        style: GoogleFonts.roboto(
-                          color: Colors.blueAccent,
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Compaore Elodie",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "23 660 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
@@ -283,13 +536,26 @@ class _PagedState extends State<Paged> {
                         ),
                       ),
                       padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Zougmooré Doriana 97 000 FCFA",
-                        style: GoogleFonts.roboto(
-                          color: Colors.blueAccent,
-                          //fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Zougmooré Doriana",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          Text(
+                            "97 000 FCFA",
+                            style: GoogleFonts.roboto(
+                              color: Colors.blueAccent,
+                              //fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
@@ -477,26 +743,39 @@ class _PagedState extends State<Paged> {
                   Radius.circular(30),
                 ),
               ),
-              child: Column(
+              child: Row(
                 children: [
-                  Text(
-                    "Compaoré Raoul",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  const FaIcon(
+                    FontAwesomeIcons.user,
+                    color: Colors.white,
                   ),
                   const SizedBox(
-                    height: 2,
+                    width: 10,
                   ),
-                  Text(
-                    "Raoul2compaoré@gmail.com",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Compaoré Raoul",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 2,
+                      ),
+                      Text(
+                        "Raoul2compaoré@gmail.com",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
