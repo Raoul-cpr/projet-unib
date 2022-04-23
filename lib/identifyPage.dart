@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unib/page.dart';
+import 'package:unib/paged.dart';
 import 'package:unib/textfield.dart';
+import 'package:unib/utils/util.dart';
 
 import 'authMethods.dart';
 import 'connectPage.dart';
@@ -16,7 +17,7 @@ class IdentifyPage extends StatefulWidget {
 }
 
 class _IdentifyPageState extends State<IdentifyPage> {
-  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _fullNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passWordController = TextEditingController();
   bool _isLoading = false;
@@ -24,7 +25,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
   @override
   void dispose() {
     super.dispose();
-    _nameController.dispose();
+    _fullNameController.dispose();
     _emailController.dispose();
     _passWordController.dispose();
   }
@@ -35,7 +36,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
     });
     String res = await AuthMethods().signIn(
       email: _emailController.text,
-      uName: _nameController.text,
+      fullName: _fullNameController.text,
       passWord: _passWordController.text,
     );
     setState(() {
@@ -45,7 +46,14 @@ class _IdentifyPageState extends State<IdentifyPage> {
     if (res == 'Succes') {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Paged()));
+    } else {
+      showSnackBar(res, context);
     }
+  }
+
+  navigateToConnectPage() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const IdentifyPage()));
   }
 
   @override
@@ -92,7 +100,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
                 Container(
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     child: Textfield(
-                      controller: _nameController,
+                      controller: _fullNameController,
                       hintText: "Nom complet",
                       obscureText: false,
                     )),

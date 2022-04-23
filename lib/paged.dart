@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:unib/donpage.dart';
 import 'package:unib/ensavoirpluspage.dart';
 import 'package:unib/listeDonPage.dart';
+import 'package:unib/models/user.dart' as model;
+import 'package:unib/provider/user_provider.dart';
 
 class Paged extends StatefulWidget {
   const Paged({Key? key}) : super(key: key);
@@ -14,7 +17,19 @@ class Paged extends StatefulWidget {
 
 class _PagedState extends State<Paged> {
   @override
+  void initState() {
+    super.initState();
+    addData();
+  }
+
+  addData() async {
+    UserProvider _userProvider = Provider.of(context, listen: false);
+    await _userProvider.refreshUser();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    model.User user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -757,7 +772,7 @@ class _PagedState extends State<Paged> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Compaoré Raoul",
+                        user.fullName,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,
@@ -768,7 +783,7 @@ class _PagedState extends State<Paged> {
                         height: 2,
                       ),
                       Text(
-                        "Raoul2compaoré@gmail.com",
+                        user.email,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,

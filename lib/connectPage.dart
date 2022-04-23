@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unib/main.dart';
-import 'package:unib/page.dart';
+import 'package:unib/paged.dart';
 import 'package:unib/textfield.dart';
+import 'package:unib/utils/util.dart';
 
 import 'authMethods.dart';
 import 'identifyPage.dart';
@@ -41,7 +42,14 @@ class _ConnectPageState extends State<ConnectPage> {
     if (res == 'Succes') {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Paged()));
+    } else {
+      showSnackBar(res, context);
     }
+  }
+
+  navigateToIdentifyPage() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const IdentifyPage()));
   }
 
   @override
