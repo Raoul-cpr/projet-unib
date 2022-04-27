@@ -45,7 +45,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
 
     if (res == 'Succes') {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Paged()));
+          context, MaterialPageRoute(builder: (context) => Paged()));
     } else {
       showSnackBar(res, context);
     }

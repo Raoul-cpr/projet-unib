@@ -34,7 +34,7 @@ class AuthMethods {
         await _firestore
             .collection("users")
             .doc(cred.user!.uid)
-            .set(user.ToJson());
+            .set(user.toJson());
         res = 'Succes';
       }
     } catch (e) {

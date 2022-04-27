@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:unib/models/user.dart';
 
 class User {
   final String uid;
@@ -12,7 +13,7 @@ class User {
     required this.fullName,
   });
 
-  Map<String, dynamic> ToJson() => {
+  Map<String, dynamic> toJson() => {
         "uid": uid,
         "email": email,
         "fullName": fullName,
@@ -20,11 +21,10 @@ class User {
 
   static User fromSnap(DocumentSnapshot snap) {
     var snapshot = snap.data() as Map<String, dynamic>;
-
     return User(
       uid: snapshot["uid"],
       email: snapshot["email"],
-      fullName: snapshot["fullname"],
+      fullName: snapshot["fullName"],
     );
   }
 }

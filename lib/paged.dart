@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:unib/donpage.dart';
 import 'package:unib/ensavoirpluspage.dart';
 import 'package:unib/listeDonPage.dart';
-import 'package:unib/models/user.dart' as model;
+import 'package:unib/models/user.dart';
 import 'package:unib/provider/user_provider.dart';
 
 class Paged extends StatefulWidget {
@@ -29,7 +29,7 @@ class _PagedState extends State<Paged> {
 
   @override
   Widget build(BuildContext context) {
-    model.User user = Provider.of<UserProvider>(context).getUser;
+    final User user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
