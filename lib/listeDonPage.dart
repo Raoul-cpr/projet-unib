@@ -45,7 +45,6 @@ class _ListDonPageState extends State<ListDonPage> {
           width: double.infinity,
           margin: const EdgeInsets.only(right: 15, left: 15, bottom: 15),
           //padding: const EdgeInsets.symmetric(horizontal: 15),
-
           child: Column(
             children: [
               const SizedBox(
@@ -55,7 +54,7 @@ class _ListDonPageState extends State<ListDonPage> {
                 //height: 120,
                 //width: 250,
                 margin: const EdgeInsets.symmetric(horizontal: 40),
-                padding: const EdgeInsets.symmetric(vertical: 15),
+                padding: const EdgeInsets.symmetric(vertical: 25),
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Color.fromARGB(233, 25, 239, 178),
@@ -94,6 +93,7 @@ class _ListDonPageState extends State<ListDonPage> {
                 height: 10,
               ),
               Container(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 color: Colors.black12,
                 child: Column(
                   //mainAxisAlignment: MainAxisAlignment.spaceBetween,

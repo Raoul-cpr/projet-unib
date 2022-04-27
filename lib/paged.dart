@@ -7,6 +7,7 @@ import 'package:unib/ensavoirpluspage.dart';
 import 'package:unib/listeDonPage.dart';
 import 'package:unib/models/user.dart';
 import 'package:unib/provider/user_provider.dart';
+import 'package:unib/utils/util.dart';
 
 class Paged extends StatefulWidget {
   const Paged({Key? key}) : super(key: key);
@@ -25,6 +26,33 @@ class _PagedState extends State<Paged> {
   addData() async {
     UserProvider _userProvider = Provider.of(context, listen: false);
     await _userProvider.refreshUser();
+  }
+
+  _optionFonction(BuildContext context) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return SimpleDialog(
+            title: const Text("Options"),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15),
+                child: const Text("Modifier mes informations"),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15),
+                child: const Text("Se deconnecter"),
+                onPressed: () async {
+                  Navigator.pop(context);
+                  await deconnexion();
+                },
+              )
+            ],
+          );
+        });
   }
 
   @override
@@ -750,49 +778,53 @@ class _PagedState extends State<Paged> {
             const SizedBox(
               height: 4,
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 60),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(233, 25, 239, 178),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
+            InkWell(
+              onTap: () => _optionFonction(context),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 25),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(233, 25, 239, 178),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(30),
+                  ),
                 ),
-              ),
-              child: Row(
-                children: [
-                  const FaIcon(
-                    FontAwesomeIcons.user,
-                    color: Colors.white,
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        user.fullName,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                child: Row(
+                  children: [
+                    const FaIcon(
+                      FontAwesomeIcons.user,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          user.fullName,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 2,
-                      ),
-                      Text(
-                        user.email,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        const SizedBox(
+                          height: 2,
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                        Text(
+                          user.email,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(
