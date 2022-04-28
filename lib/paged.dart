@@ -151,7 +151,7 @@ class _PagedState extends State<Paged> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Color.fromARGB(31, 255, 255, 255),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               padding: const EdgeInsets.symmetric(horizontal: 25),
               height: 300,
