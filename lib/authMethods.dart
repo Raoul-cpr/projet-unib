@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:unib/models/user.dart' as model;
+import 'package:unib/utils/util.dart';
 
 class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -14,15 +15,19 @@ class AuthMethods {
     return model.User.fromSnap(snap);
   }
 
-  Future<String> signIn(
-      {required String email,
-      required String fullName,
-      required String passWord}) async {
+  Future<String> signIn({
+    required String email,
+    required String fullName,
+    required String passWord,
+    required BuildContext context,
+  }) async {
     String res = 'Some error occure';
     try {
       if (email.isNotEmpty || fullName.isNotEmpty || passWord.isNotEmpty) {
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
             email: email, password: passWord);
+
+        await sendEmailverification(context);
         print(cred.user!.uid);
 
         model.User user = model.User(
@@ -58,5 +63,15 @@ class AuthMethods {
       res = e.toString();
     }
     return res;
+  }
+
+  //verification du mail
+  Future<void> sendEmailverification(BuildContext context) async {
+    try {
+      await _auth.currentUser!.sendEmailVerification();
+      showSnackBar("Le mail de érification vous a été envoyé", context);
+    } catch (e) {
+      e.toString();
+    }
   }
 }

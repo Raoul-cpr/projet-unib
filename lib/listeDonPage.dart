@@ -131,8 +131,9 @@ class _ListDonPageState extends State<ListDonPage> {
                     ),
                     Text(
                       '22 fevrier',
-                      style:
-                          GoogleFonts.halant(color: Colors.black, fontSize: 12),
+                      style: GoogleFonts.halant(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                          fontSize: 12),
                     ),
                   ],
                 ),
@@ -187,8 +188,9 @@ class _ListDonPageState extends State<ListDonPage> {
                     ),
                     Text(
                       '22 fevrier',
-                      style:
-                          GoogleFonts.halant(color: Colors.black, fontSize: 12),
+                      style: GoogleFonts.halant(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                          fontSize: 12),
                     ),
                   ],
                 ),
@@ -243,8 +245,9 @@ class _ListDonPageState extends State<ListDonPage> {
                     ),
                     Text(
                       '22 fevrier',
-                      style:
-                          GoogleFonts.halant(color: Colors.black, fontSize: 12),
+                      style: GoogleFonts.halant(
+                          color: Color.fromARGB(233, 25, 239, 178),
+                          fontSize: 12),
                     ),
                   ],
                 ),
