@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,7 +47,8 @@ class _IdentifyPageState extends State<IdentifyPage> {
       _isLoading = false;
     });
 
-    if (res == 'Succes') {
+    if (res == 'Succes' ||
+        FirebaseAuth.instance.currentUser?.emailVerified == true) {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Paged()));
     } else {
