@@ -47,8 +47,10 @@ class _IdentifyPageState extends State<IdentifyPage> {
       _isLoading = false;
     });
 
-    if (res == 'Succes' ||
-        FirebaseAuth.instance.currentUser?.emailVerified == true) {
+    if (res ==
+            'Succes' /*||
+        FirebaseAuth.instance.currentUser?.emailVerified == true*/
+        ) {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Paged()));
     } else {

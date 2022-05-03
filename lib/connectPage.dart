@@ -154,41 +154,44 @@ class _ConnectPageState extends State<ConnectPage> {
                     fontSize: 15,
                   ),
                 ),
+                const SizedBox(
+                  height: 135,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Vous n'avez pas de compte?",
+                      style: GoogleFonts.lato(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 3,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const IdentifyPage()));
+                      },
+                      child: Text(
+                        "Creer un compte",
+                        style: GoogleFonts.raleway(
+                          color: Colors.blueAccent,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Vous n'avez pas de compte?",
-            style: GoogleFonts.lato(
-              color: Colors.black,
-              fontSize: 15,
-            ),
-          ),
-          const SizedBox(
-            width: 3,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const IdentifyPage()));
-            },
-            child: Text(
-              "Creer un compte",
-              style: GoogleFonts.raleway(
-                color: Colors.blueAccent,
-                fontSize: 15,
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
