@@ -149,18 +149,18 @@ class _PagedState extends State<Paged> {
               height: 8,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 5),
               decoration: BoxDecoration(
                   color: Color.fromARGB(31, 255, 255, 255),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               height: 300,
               width: double.infinity,
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: [
-                    const SizedBox(
+                    /*const SizedBox(
                       height: 15,
                     ),
                     Container(
@@ -626,6 +626,522 @@ class _PagedState extends State<Paged> {
                       height: 4,
                       width: 2,
                       color: Colors.black12,
+                    ),*/
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Kagambega Ousmane",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '10 000 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Nikiema Elodie",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 100 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Kagambega Ousmane",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '10 000 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Nikiema Elodie",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 100 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Bazié Ndolé",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 700 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Bazié Ndolé",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 700 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Kagambega Ousmane",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '10 000 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Nikiema Elodie",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 100 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      color: Colors.white,
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Bazié Ndolé",
+                                style: GoogleFonts.raleway(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 2),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(233, 25, 239, 178),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  '1 700 FCFA',
+                                  style: GoogleFonts.raleway(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '22 fevrier',
+                            style: GoogleFonts.halant(
+                                color: Color.fromARGB(233, 25, 239, 178),
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      height: 1,
+                      width: double.infinity,
+                      color: Colors.black12,
                     ),
                   ],
                 ),
@@ -710,7 +1226,7 @@ class _PagedState extends State<Paged> {
                       children: [
                         FaIcon(
                           FontAwesomeIcons.list,
-                          color: Color.fromARGB(255, 11, 123, 214),
+                          color: Color.fromARGB(255, 237, 204, 41),
                           size: 25,
                         ),
                         Text(
@@ -755,7 +1271,7 @@ class _PagedState extends State<Paged> {
                       children: [
                         FaIcon(
                           FontAwesomeIcons.info,
-                          color: Color.fromARGB(255, 237, 204, 41),
+                          color: Colors.green,
                           size: 25,
                         ),
                         Text(
