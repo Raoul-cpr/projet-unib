@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:unib/main.dart';
 import 'package:unib/paged.dart';
@@ -19,6 +20,7 @@ class _ConnectPageState extends State<ConnectPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passWordController = TextEditingController();
   bool _isLoading = false;
+  bool obscure = true;
 
   @override
   void dispose() {
@@ -103,13 +105,34 @@ class _ConnectPageState extends State<ConnectPage> {
                 const SizedBox(
                   height: 30,
                 ),
-                Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Textfield(
-                      controller: _passWordController,
-                      hintText: "Mot de passe",
-                      obscureText: true,
-                    )),
+                Stack(
+                  alignment: AlignmentDirectional.topEnd,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Textfield(
+                        controller: _passWordController,
+                        hintText: "Mot de passe",
+                        obscureText: obscure,
+                      ),
+                    ),
+                    IconButton(
+                      padding: const EdgeInsets.only(right: 20),
+                      onPressed: () {
+                        setState(() {
+                          obscure = !obscure;
+                        });
+                      },
+                      icon: FaIcon(
+                        obscure
+                            ? FontAwesomeIcons.eye
+                            : FontAwesomeIcons.eyeLowVision,
+                      ),
+
+                      // size: 15,
+                    )
+                  ],
+                ),
                 const SizedBox(
                   height: 30,
                 ),

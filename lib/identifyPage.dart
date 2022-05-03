@@ -141,7 +141,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
                         setState(() {
                           obscure = !obscure;
                         });
-                      } /*je met une fonction ici */,
+                      },
                       icon: FaIcon(
                         obscure
                             ? FontAwesomeIcons.eye
