@@ -38,7 +38,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
       _isLoading = true;
     });
     String res = await AuthMethods().signIn(
-      email: _emailController.text,
+      email: _emailController.text.trim(),
       fullName: _fullNameController.text,
       passWord: _passWordController.text,
       context: context,

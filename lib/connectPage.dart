@@ -34,7 +34,7 @@ class _ConnectPageState extends State<ConnectPage> {
       _isLoading = true;
     });
     String res = await AuthMethods().connect(
-      email: _emailController.text,
+      email: _emailController.text.trim(),
       password: _passWordController.text,
     );
     setState(() {
