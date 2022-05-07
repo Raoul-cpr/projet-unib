@@ -27,7 +27,7 @@ class AuthMethods {
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
             email: email, password: passWord);
 
-        await sendEmailverification(context);
+        /*await sendEmailverification(context);*/
         print(cred.user!.uid);
 
         model.User user = model.User(
@@ -66,12 +66,12 @@ class AuthMethods {
   }
 
   //verification du mail
-  Future<void> sendEmailverification(BuildContext context) async {
+  /*Future<void> sendEmailverification(BuildContext context) async {
     try {
       await _auth.currentUser!.sendEmailVerification();
       showSnackBar("Le mail de érification vous a été envoyé", context);
     } catch (e) {
       e.toString();
     }
-  }
+  }*/
 }

@@ -9,6 +9,7 @@ import 'package:unib/connectPage.dart';
 import 'package:unib/paged.dart';
 import 'package:unib/provider/user_provider.dart';
 import 'package:unib/textfield.dart';
+import 'package:unib/utils/verifyEmailPage.dart';
 
 import 'identifyPage.dart';
 

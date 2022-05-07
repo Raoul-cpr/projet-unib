@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:unib/paged.dart';
 import 'package:unib/textfield.dart';
 import 'package:unib/utils/util.dart';
+import 'package:unib/utils/verifyEmailPage.dart';
 
 import 'authMethods.dart';
 import 'connectPage.dart';
@@ -52,7 +53,7 @@ class _IdentifyPageState extends State<IdentifyPage> {
         FirebaseAuth.instance.currentUser?.emailVerified == true*/
         ) {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Paged()));
+          context, MaterialPageRoute(builder: (context) => VerifyEmailPage()));
     } else {
       showSnackBar(res, context);
     }

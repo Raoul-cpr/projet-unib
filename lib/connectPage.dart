@@ -158,7 +158,7 @@ class _ConnectPageState extends State<ConnectPage> {
                             ),
                           )
                         : const Text(
-                            "Creer un compte",
+                            "Se connecter",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,

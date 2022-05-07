@@ -47,7 +47,7 @@ class _PagedState extends State<Paged> {
                 child: const Text("Se deconnecter"),
                 onPressed: () async {
                   Navigator.pop(context);
-                  await deconnexion();
+                  await deconnexion(context);
                 },
               )
             ],
