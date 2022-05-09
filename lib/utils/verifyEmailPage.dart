@@ -60,35 +60,77 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: true,
-        title: const Text(
-          "Verification de l'email",
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-      ),
-      body: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: Center(
-                child: Text(
-                  "Nous vous avons envoyé un email de verification",
-                  style: GoogleFonts.alef(fontSize: 25, color: Colors.black),
-                ),
+  Widget build(BuildContext context) => isVerify
+      ? Paged()
+      : Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            centerTitle: true,
+            title: const Text(
+              "Verification de l'email",
+              style: TextStyle(
+                color: Colors.black,
               ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+            ),
+          ),
+          body: Container(
+            color: Colors.white,
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Center(
+                          child: Text(
+                            "Nous vous avons envoyé un email de verification",
+                            style: GoogleFonts.raleway(
+                                fontSize: 25, color: Colors.black),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Center(
+                          child: Text(
+                            "Veuillez verifier votre boite de reception confirmer votre mail en cliquant sur le lien et revenez dans l'application",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 20, color: Colors.black),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 20),
+                        height: 30,
+                        decoration: const BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: Text(
+                          "Renvoyer le mail",
+                          style: GoogleFonts.montserrat(
+                            fontSize: 25,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
 }

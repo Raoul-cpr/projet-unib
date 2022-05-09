@@ -76,7 +76,7 @@ class _ConnectPageState extends State<ConnectPage> {
                   height: 45,
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
