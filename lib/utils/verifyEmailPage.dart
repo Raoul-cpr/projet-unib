@@ -110,24 +110,44 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 50),
+                      Container(
+                        height: 1,
+                        width: double.infinity,
+                        color: Colors.black12,
+                      ),
                       const SizedBox(
-                        height: 50,
+                        height: 30,
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 45, vertical: 10),
-                        //height: 30,
-                        decoration: const BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
+                        child: Center(
+                          child: Text(
+                            "30 s",
+                            style: TextStyle(color: Colors.blue, fontSize: 25),
                           ),
                         ),
-                        child: Text(
-                          "Renvoyer le mail",
-                          style: GoogleFonts.montserrat(
-                            fontSize: 20,
-                            color: Colors.white,
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 45, vertical: 10),
+                          //height: 30,
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            "Renvoyer le mail",
+                            style: GoogleFonts.montserrat(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),

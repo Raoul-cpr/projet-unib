@@ -60,7 +60,7 @@ class _ConnectPageState extends State<ConnectPage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            color: Colors.white,
+            //color: Colors.white,
             //height: double.infinity,
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 15),
